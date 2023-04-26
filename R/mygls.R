@@ -16,14 +16,13 @@
 #'
 #'@keywords internal
 #'
-#'@importFrom stats na.fail terms formula asOneSidedFormula contrasts nlminb logLik optim fitted coef model.frame update
-#'@importFrom nlme glsControl getGroupsFormula glsStruct varFunc asOneFormula getGroups Initialize needUpdate varWeights glsApVar coef<-
+#' @importFrom stats na.fail terms formula asOneSidedFormula contrasts nlminb logLik optim fitted coef model.frame update
+#' @importFrom nlme glsControl getGroupsFormula glsStruct varFunc asOneFormula getGroups Initialize needUpdate varWeights glsApVar coef<-
 
 mygls <- function (model, data = sys.frame(sys.parent()), correlation = NULL, 
           weights = NULL, subset, method = c("REML", "ML"), na.action = na.fail, 
           control = list(), verbose = FALSE) 
 {
-  # library(nlme)
   Call <- match.call()
   controlvals <- glsControl()
   if (!missing(control)) 
@@ -159,7 +158,6 @@ mygls <- function (model, data = sys.frame(sys.parent()), correlation = NULL,
   else "Approximate variance-covariance matrix not available"
   dims <- attr(glsSt, "conLin")[["dims"]]
   dims[["p"]] <- p
-  #attr(glsSt, "conLin") <- NULL Let's keep this as we need it !!!
   attr(glsSt, "glsFit") <- NULL
   attr(glsSt, "fixedSigma") <- fixedSigma
   grpDta <- inherits(data, "groupedData")

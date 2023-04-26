@@ -1,3 +1,7 @@
+# vici 0.7.0
+
+ * Added graphical options
+
 # vici 0.6.0
 
  * Added support for additional degree of freedom methods 

@@ -6,15 +6,7 @@
 \usage{
 ddf_BW(object, L)
 }
-\arguments{
-\item{object}{a \code{gls} model object.}
-
-\item{L}{a numeric vector of the same length as the number of fixed effects from \code{object}.}
-}
-\value{
-a \code{number} object
-}
 \description{
-Internal function to calculate Between-Within degrees of freedom
+Between-Within functions to obtain Denominator degrees of freedom
 }
 \keyword{internal}

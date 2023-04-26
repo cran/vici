@@ -12,7 +12,6 @@ app_server <- function(input, output, session) {
   output$mod <- reactive(NULL)
   output$mod_display <- reactive(FALSE)
   output$res_sentence <- reactive(NULL)
-  #output$res_tab <- reactive(NULL)
   output$res_error <- reactive(NULL)
   output$res_lik <- reactive(NULL)
   output$heatmap <- reactive(NULL)
@@ -63,32 +62,28 @@ app_server <- function(input, output, session) {
     }
   )
 
-  
   #Module return input so sub module can access it
   inpt <- callModule(module = mod_settings_pan_server, id = "settings_pan_ui_1",data = data,parent = session)
 
-  callModule(module = mod_modelfit_server, id = "modelfit_ui_1",data = data,parent = inpt,origin = session)
-  # cat("before write Latex", "\n")
+  callModule(module = mod_modelfit_server, id = "modelfit_ui_1",datas = data,parent = inpt,origin = session)
    observeEvent({
-     input$selectModel
-     input$selectStim
-     input$selectRefStim
-     input$selectArmInter 
-     input$selectArmIntra
-     input$selectRefArmInter 
-     input$selectRefArmIntra
-     input$selectTimeInter 
-     input$selectTimeIntra
-     input$selectRefTimeInter 
-     input$selectRefTimeIntra
-     }, {
+     input$selectModel;
+     input$selectStim;
+     input$selectRefStim;
+     input$selectArmInter; 
+     input$selectArmIntra;
+     input$selectRefArmInter ;
+     input$selectRefArmIntra;
+     input$selectTimeInter ;
+     input$selectTimeIntra;
+     input$selectRefTimeInter ;
+     input$selectRefTimeIntra}, {
        #appelé data load
 
        # write LaTeX model ----
-      # cat("can write Latex", "\n")
+       
        if(input$selectModel == 1 & input$selectRefStim != '' & input$selectRefArmInter != '' & input$selectStim !='' &
           input$selectArmInter %in% colnames(data$df) & input$selectStim %in% colnames(data$df)){
-         # cat("write Latex Inter", "\n")
          output$mod_display <- reactive(TRUE)
          arm_coefs <- NULL
          for(a in levels(data$df[, input$selectArmInter])){
@@ -152,7 +147,6 @@ app_server <- function(input, output, session) {
            )
          })
        }else{
-         # cat("no write Latex", "\n")
          output$mod <- reactive(NULL)
          output$mod_display <- reactive(FALSE)
        }

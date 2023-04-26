@@ -7,7 +7,7 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/vici)](https://CRAN.R-project.org/package=vici)
-[![R-CMD-check](https://github.com/sistm/vici/workflows/R-CMD-check/badge.svg?branch=cran)](https://github.com/sistm/vici/actions/workflows/R-CMD-check.yaml?query=branch%3Acran)
+[![R-CMD-check](https://github.com/sistm/vici/workflows/R-CMD-check/badge.svg?branch=file_version)](https://github.com/sistm/vici/actions/workflows/R-CMD-check.yaml?query=branch%3Afile_version)
 [![Downloads](https://cranlogs.r-pkg.org/badges/vicis?color=blue)](https://www.r-pkg.org/pkg/vici)
 <!-- badges: end -->
 
@@ -35,7 +35,7 @@ or get the development version from
 
 ``` r
 #install.packages("remotes")
-remotes::install_github("sistm/vici", ref = "cran")
+remotes::install_github("sistm/vici", ref = "file_version")
 ```
 
 Then you can launch the app with:
@@ -46,10 +46,9 @@ vici::run_app()
 
 ## Deployed VICI
 
--   Latest **development** version is deployed at
-    <https://shiny-vici.apps.math.cnrs.fr/>
-
--   Latest **stable** version is deployed at
-    <http://vici.bph.u-bordeaux.fr/>
+- Latest **development** version is deployed at
+  <https://shiny-vici.apps.math.cnrs.fr/>  
+- Latest **stable** version is deployed at
+  <http://vici.bph.u-bordeaux.fr/>
 
 – Boris Hejblum

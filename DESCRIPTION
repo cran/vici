@@ -1,7 +1,7 @@
 Package: vici
 Title: Vaccine Induced Cellular Immunogenicity with Bivariate Modeling
-Version: 0.6.0
-Date: 2022-06-27
+Version: 0.7.0
+Date: 2023-04-26
 Authors@R: c(person('Boris', 'Hejblum', email = 'boris.hejblum@u-bordeaux.fr', role = c('cre', 'aut')),
              person('Melanie', 'Huchon', email = 'melanie.huchon@u-bordeaux.fr', role = c('aut')),
              person('Clement', 'Nerestan', email = 'clement.nerestan@u-bordeaux.fr', role = c('aut'))
@@ -14,15 +14,16 @@ BugReports: https://github.com/sistm/vici/issues
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports: cowplot, DT, ggplot2, grDevices, ggpubr, nlme, numDeriv,
-        shiny, stats, stringr, tidyr, utils
+Imports: cowplot, DT, ggplot2, grDevices, ggpubr, nlme, shiny, stats,
+        tidyr, utils, numDeriv, stringr, RColorBrewer, scales,
+        shinyWidgets
 Suggests: testthat
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2022-06-27 11:18:39 UTC; boris
+Packaged: 2023-04-26 14:45:52 UTC; mh8
 Author: Boris Hejblum [cre, aut],
   Melanie Huchon [aut],
   Clement Nerestan [aut]
 Maintainer: Boris Hejblum <boris.hejblum@u-bordeaux.fr>
 Repository: CRAN
-Date/Publication: 2022-06-27 15:00:02 UTC
+Date/Publication: 2023-04-26 15:10:02 UTC

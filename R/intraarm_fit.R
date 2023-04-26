@@ -1,9 +1,9 @@
-#'Fitting \code{GLS} For Intra-Arm Setting
-#'
+#'Fitting GLS For Intra-Arm Setting
 #'
 #' @keywords internal
 #' @importFrom stats na.omit
 #' @importFrom nlme varIdent
+
 intraarm_fit <- function(transformed_data, tested_time, input,resp){
   
   res_tab <- NULL

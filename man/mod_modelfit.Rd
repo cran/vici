@@ -18,11 +18,11 @@ mod_modelfit_server(input, output, session, datas, parent, origin)
 
 \item{session}{internal}
 
+\item{datas}{internal}
+
 \item{parent}{internal}
 
 \item{origin}{internal}
-
-\item{data}{internal}
 }
 \description{
 A shiny Module.
