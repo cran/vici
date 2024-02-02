@@ -1,8 +1,10 @@
 #' @import shiny
 app_ui <- function() {
   fluidPage(
-    titlePanel("VICI: accurate estimation of Vaccine Induced Cellular Immunogenicity with bivariate modeling",windowTitle = "VICI"),
-    h6("v0.7.0"),
+    tags$head(tags$link(rel="shortcut icon", href="www/favicon.ico")),
+    titlePanel(div(img(src='www/logo.svg', align="right", height="120"), "VICI: accurate estimation of Vaccine Induced Cellular Immunogenicity with bivariate modeling"),
+               windowTitle = "VICI"),
+    h6("v0.7.3"),
     h5(),
 
     shiny::actionLink(inputId='github_code', label="Source code",
@@ -24,7 +26,7 @@ app_ui <- function() {
                                condition = "output.heatmap != null | output.res_error != null",
                                tags$hr(),
                                h3("Analysis results"),
-                               
+
                                conditionalPanel(
                                  condition = "output.res_error != null",
                                  verbatimTextOutput("res_error")
